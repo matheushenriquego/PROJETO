@@ -1,39 +1,25 @@
 # PROJETO
 PROJETO DE SOFTWARE
+
 **Multi-Location Management: não foi implementado agora pois o codigo so funciona em uma unica instancia**
 
+## Product Catalog Management: Adding, updating, and categorizing inventory items
 
+## Stock Level Tracking: Real-time tracking of inventory levels
 
-1 - Adicionar produto
-2 - Atualizar produto
-3 - Verificar quantidade de produtos em estoque
-4 - Verificar valor do estoque atual
-5 - Realizar uma compra
-6 - historico de compras
-0 - Fechar programa
+## Reorder Alerts: Automated alerts for low stock and reorder points
 
-## 1 
-    Nome do produto: String com o nome do produto
-    Código do produto: String contendo o codigo do produto
-    Quantidade: inteiro para a total dele
-    Categoria: String para sua categoria
-    Valor unitário: Float para valor de cada unidade
+## Supplier Management: Managing information about suppliers
+ 
+## Barcode Scanning: Integration of barcode scanning for inventory management
 
-## 2
-    Atualiza o produto inteiro mudando seu codigo,quantidade,categoria,valor unitário e nome
+## Inventory Valuation: Calculating the total value of the inventory on hand
 
+## Purchase Order Creation: Generating and managing purchase orders
 
-## 3
-    mostra os produtos atuais em estoque
+## Sales and Purchase History: Tracking and analyzing sales and purchase data
 
-## 4
-    Mostra o valor total do estoque atual
-
-## 5
-    Faz uma compra atravez do codigo do produto, se não souber o codigo ou se a quantidade é maior que atual no estoque volta para o menu principal
-
-## 6
-    mostra o historico de todas as compras realizadas
+## Inventory Reports: Generating detailed reports on inventory status and movements
 
 
     
