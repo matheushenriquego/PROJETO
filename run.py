@@ -1,5 +1,6 @@
 INVENTORY = dict()
 REGISTRATION = list()
+SUPLIER = list()
 
 class Product:
     def __init__(self, name, unit_cost, quantity, code, category):
@@ -49,7 +50,6 @@ def buy_product():
     INVENTORY[code]=product
     REGISTRATION.append(build_purchase(product,quantity))
     
-
 def build_purchase(product,quantity):
     purchase = Purchase(
         code = product.code,
@@ -91,7 +91,6 @@ def update_product():
 
     INVENTORY[new_product.code] = new_product
 
-
 def list_products_quantities():
     for code, product in INVENTORY.items():
         print(f"Código: {code} Nome: {product.name} Quantidade: {product.quantity}")
@@ -100,7 +99,22 @@ def get_inventory_value():
     total = 0
     for code, product in INVENTORY.items():
         total += product.unit_cost * product.quantity
-    print(f"Inventario atual avaliando em :R${total}")   
+    print(f"Inventario atual avaliando em :R${total}\n")   
+
+def get_supliers():
+    choice=input("1.adicionar\n2.remover\n")
+    if choice == "1":
+        nome = input("diga o nome do carregador\n")
+        SUPLIER.append(nome)
+    elif choice == "2":
+        nome = input("diga o nome do carregador\n")
+        try:
+            SUPLIER.remove(nome)
+        except ValueError:
+            print(f"'{nome}' não é um funcionario.") 
+    else:
+        print("INVALIDO")
+
 
 should_run = True
 
@@ -111,6 +125,8 @@ message = """
 4 - Verificar valor do estoque atual
 5 - Realizar uma compra
 6 - historico de compras
+7 - adicionar/remover funcionario
+8 - mostrar os funcioanrios atuais
 0 - Fechar programa
 """
 
@@ -129,9 +145,12 @@ while should_run:
     elif result == "5":
         buy_product()
     elif result == "6":
-        print(REGISTRATION)    
+        print(REGISTRATION)
+    elif result == "7":
+        get_supliers()
+    elif result == "8":
+        print(SUPLIER)   
     elif result == "0":
         should_run = False
     else:
         print("Errado")
-    print(INVENTORY)
